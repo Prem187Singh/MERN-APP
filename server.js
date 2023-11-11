@@ -34,6 +34,9 @@ app.get("/", (req, res) =>
 app.get("/signin", (req, res) =>
   res.sendFile(path.join(__dirname, "/frontend/build/index.html"))
 );
+app.get("/signup", (req, res) =>
+  res.sendFile(path.join(__dirname, "/frontend/build/index.html"))
+);
 
 app.get("/api/keys/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || "sb");
